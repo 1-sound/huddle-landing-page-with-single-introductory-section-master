@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Huddle landing page with single introductory section</title>
+  <script src="https://kit.fontawesome.com/cb9d45ac12.js" crossorigin="anonymous"></script>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    @font-face {
+      font-family: 'Poppins';
+      src: url(https://fonts.google.com/specimen/Poppins);
+    }
+
+    @font-face {
+      font-family: 'Open Sans';
+      src: url(https://fonts.google.com/specimen/Open+Sans);
+    }
+
+    body {
+      background-color: hsl(257, 40%, 49%);
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      color: hsl(300, 69%, 71%);
+    }
+
+    .logo {
+      width: 140px;
+      margin: 35px;
+    }
+
+    .mockups-box {
+      display: flex;
+      justify-content: center;
+      margin-top: 25px;
+    }
+
+    .mockups {
+      z-index: 2;
+      width: 300px;
+    }
+
+    .bg-mobile {
+      z-index: 1;
+      position: absolute;
+      width: 100%;
+    }
+
+    .bg-desktop {
+      display: none;
+    }
+
+    .container {
+      z-index: 2;
+      position: relative;
+      margin-top: 60px;
+    }
+
+    .maintext {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.4;
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    .subtext {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Open sans', sans-serif;
+      font-weight: 300;
+      font-size: 16px;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .subsubtext {
+      width: 295px;
+    }
+
+    .btn {
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      width: 200px;
+      height: 40px;
+      border-radius: 20px;
+      border: none;
+      background: #fff;
+      font-family: 'Open sans', sans-serif;
+      font-weight: 300;
+      font-size: 13px;
+      color: hsl(257, 40%, 49%);
+      margin: 30px 0;
+      box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+    }
+
+    button:active {
+      background-color: hsl(300, 69%, 71%);
+      color: #fff;
+    }
+
+    .iconbox {
+      z-index: 2;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #fff;
+      width: 27px;
+      height: 27px;
+      border-radius: 50%;
+      color: #fff;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      cursor: pointer;
+    }
+
+    .icon:active {
+      border: 1px solid hsl(300, 69%, 71%);
+      color: hsl(300, 69%, 71%);
+    }
+
+
+    .attribution {
+      z-index: 2;
+      position: relative;
+      font-size: 11px;
+      text-align: center;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      body {
+        display: block;
+      }
+
+      .bg-desktop {
+        z-index: 1;
+        display: flex;
+        position: absolute;
+        height: 100%;
+      }
+
+      .bg-mobile {
+        display: none;
+      }
+
+      .logo {
+        z-index: 2;
+        position: relative;
+        width: 300px;
+        margin: 60px;
+      }
+
+      .main {
+        display: flex;
+      }
+
+      .mockups-box {
+        flex: 1 1 50%;
+        margin-left: 60px;
+        margin-top: 20px;
+      }
+
+      .mockups {
+        width: 100%;
+      }
+
+      .container {
+        flex: 1 1 50%;
+        margin-top: 60px;
+        margin-left: 60px;
+      }
+
+      .subcontainer {
+        width: 100%;
+      }
+
+      .maintext {
+        font-size: 50px;
+        justify-content: left;
+        text-align: left;
+      }
+
+      .subtext {
+        font-size: 24px;
+        justify-content: left;
+        text-align: left;
+      }
+
+      .subsubtext {
+        width: 100%;
+      }
+
+      .btn {
+        justify-content: left;
+      }
+
+      button {
+        width: 280px;
+        height: 50px;
+        border-radius: 25px;
+        font-size: 20px;
+      }
+
+      .iconbox {
+        justify-content: right;
+        margin-top: 20px;
+        margin-right: 60px;
+        gap: 15px;
+      }
+
+      .icon {
+        width: 32px;
+        height: 32px;
+        margin: 0;
+        margin-top: 50px;
+      }
+
+      .attribution {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <img src="images/bg-mobile.svg" class="bg-mobile" alt="">
+  <img src="images/bg-desktop.svg" class="bg-desktop" alt="">
+  <img src="images/logo.svg" class="logo" alt="">
+  <section class="main">
+    <div class="mockups-box"><img src="images/illustration-mockups.svg" class="mockups" alt=""></div>
+    <div class="container">
+      <div class="subcontainer">
+        <div class="maintext">Build The Community <br> Your Fans Will Love</div>
+        <div class="subtext">
+          <div class="subsubtext">
+            Huddle re-imagines the way we build communities. You have a voice, but so does your audience.
+            Create connections with your users as you engage in genuine discussion.
+          </div>
+      </div>
+      </div>
+      <div class="btn"><button>Register</button></div>
+    </div>
+  </section>
+
+
+  <section class="iconbox">
+    <div class="icon"><i class="fa-brands fa-facebook-f"></i></div>
+    <div class="icon"><i class="fa-brands fa-twitter"></i></div>
+    <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+  </section>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Doosol</a>.
+    </p>
+  </footer>
+</body>
+
+</html>
